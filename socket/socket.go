@@ -59,7 +59,6 @@ func (s *Socks) handleRequest(conn *net.TCPConn) {
 
 	nmethod := int(buf[1])
 	msgLen := nmethod + 2
-
 	if n < msgLen {
 		if _, err = io.ReadFull(conn, buf[n:msgLen]); err != nil {
 			return
@@ -87,14 +86,6 @@ func (s *Socks) handleRequest(conn *net.TCPConn) {
 		return
 	}
 
-	/*
-				n 应当大于 7
-		        +----+-----+-------+------+----------+----------+
-		        |VER | CMD |  RSV  | ATYP | DST.ADDR | DST.PORT |
-		        +----+-----+-------+------+----------+----------+
-		        | 1  |  1  | X'00' |  1   | Variable |    2     |
-		        +----+-----+-------+------+----------+----------+
-	*/
 	dstServer, err := s.DialServer()
 	if err != nil {
 		log.Println(err)
