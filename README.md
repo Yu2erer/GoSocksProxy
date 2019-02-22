@@ -1,5 +1,5 @@
 # [GoSocksProxy](https://github.com/Yu2erer/GoSocksProxy)
-一个 Golang 所写的网络混淆代理 仅用来 学习 SOCKS5 协议. 实现过程可见Blog [实现 SOCKS5 网络混淆工具](https://www.yuerer.com/实现-SOCKS5-网络混淆工具/)
+一个 Golang 所写的网络混淆代理 仅用来 学习 SOCKS5 代理. 实现过程可见Blog [实现 SOCKS5 网络混淆代理](https://www.yuerer.com/实现-SOCKS5-网络混淆代理/)
 
 ![GoSocksProxy](https://www.yuerer.com/images/GoSocksProxy.jpg)
 ## 使用方法
